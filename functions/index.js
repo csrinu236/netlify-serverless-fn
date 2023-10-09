@@ -15,7 +15,8 @@ exports.handler = async (event, context) => {
     headers: {
       'Access-Control-Allow-Origin': '*.netlify.app, http://localhost:3000',
       'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, ssotoken',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Credentials': true,
     },
   };
 };
