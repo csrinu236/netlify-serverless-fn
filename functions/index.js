@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
     statusCode: 200,
     body: JSON.stringify({ message: 'Index jss' }),
     headers: {
-      'access-control-allow-origin': '*.netlify.app',
+      'Access-Control-Allow-Origin': '*.netlify.app, http://localhost:3000',
       'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type, ssotoken',
     },
