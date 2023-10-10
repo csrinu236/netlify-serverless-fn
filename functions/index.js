@@ -12,6 +12,10 @@ exports.handler = async (event, context) => {
 
   let ACAO = '*';
   const requestOrigin = event.headers.origin;
+  console.log(
+    '🚀 ~ file: index.js:15 ~ exports.handler= ~ requestOrigin:',
+    requestOrigin
+  );
   if (requestOrigin && requestOrigin.endsWith('.netlify.app')) {
     ACAO = requestOrigin;
   }
