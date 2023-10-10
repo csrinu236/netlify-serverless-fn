@@ -2,13 +2,12 @@
 exports.handler = async (event, context) => {
   // console.log('🚀 ~ file: hello.js:3 ~ exports.handler= ~ context:', context);
   // console.log('🚀 ~ file: hello.js:3 ~ exports.handler= ~ event:', event);
-
+  console.log('🚀 ~ file: hello.js:3 ~ exports.handler= ~ event:', {
+    event,
+    context,
+  });
   let ACAO = '*';
   const requestOrigin = event.headers.origin;
-  console.log(
-    '🚀 ~ file: hello.js:8 ~ exports.handler= ~ requestOrigin:',
-    requestOrigin
-  );
   if (requestOrigin && requestOrigin.endsWith('.netlify.app')) {
     ACAO = requestOrigin;
   }

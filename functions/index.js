@@ -1,7 +1,10 @@
 // netlify-functions/hello.js
 exports.handler = async (event, context) => {
   // console.log('🚀 ~ file: hello.js:3 ~ exports.handler= ~ context:', context);
-  console.log('🚀 ~ file: hello.js:3 ~ exports.handler= ~ event:', { event });
+  console.log('🚀 ~ file: hello.js:3 ~ exports.handler= ~ event:', {
+    event,
+    context,
+  });
   // const headers = {
   //   'Access-Control-Allow-Origin': '*', // Set the appropriate origin or '*' for any origin
   //   'Content-Type': 'application/json',
@@ -12,10 +15,6 @@ exports.handler = async (event, context) => {
 
   let ACAO = '*';
   const requestOrigin = event.headers.origin;
-  console.log(
-    '🚀 ~ file: index.js:15 ~ exports.handler= ~ requestOrigin:',
-    requestOrigin
-  );
   if (requestOrigin && requestOrigin.endsWith('.netlify.app')) {
     ACAO = requestOrigin;
   }
